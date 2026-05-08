@@ -1,425 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colégio Estadual Rocha Pombo - Capanema/PR</title>
+    <title>AgroTech Solutions - Seu Parceiro no Campo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/school-building.png">
+    <!-- Ícone da página (opcional) - Substitua pela sua imagem -->
+    <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2909/2909788.svg" type="image/x-icon">
+    <!-- Fontes do Google (opcional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Ícones Font Awesome (para ícones como cérebro, calculadora, mapa) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
         <div class="container">
             <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="logo-text">
-                    <h1>Colégio Estadual Rocha Pombo</h1>
-                    <p>Capanema - Paraná</p>
-                </div>
+                <!-- Substitua pela sua logo -->
+                <img src="https://via.placeholder.com/50x50/008000/FFFFFF?text=AGRO" alt="Logo AgroTech">
+                <h1>AgroTech Solutions</h1>
             </div>
-            
             <nav>
                 <ul>
-                    <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
-                    <li><a href="#about"><i class="fas fa-school"></i> Sobre</a></li>
-                    <li><a href="#courses"><i class="fas fa-book-open"></i> Cursos</a></li>
-                    <li><a href="#alimentacao"><i class="fas fa-utensils"></i> Alimentação</a></li>
-                    <li><a href="#gallery"><i class="fas fa-images"></i> Galeria</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#ia-section">IA Agrícola</a></li>
+                    <li><a href="#calculator-section">Calculadora</a></li>
+                    <li><a href="#map-section">Mapa Interativo</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
-            
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
-    <!-- Seção Hero -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Colégio Estadual Rocha Pombo</h2>
-                <p>Educação pública de qualidade em Capanema - Paraná</p>
-                <a href="#about" class="btn">Conheça Nossa Escola</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Inovação e Tecnologia no Campo</h2>
+                <p>Otimize sua produção agrícola com nossas ferramentas inteligentes.</p>
+                <a href="#ia-section" class="btn">Conheça Nossas Soluções</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sobre o Colégio -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-history"></i> Sobre o Colégio</h2>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p>O <strong>Colégio Estadual Rocha Pombo</strong> localizado em Capanema, Paraná, é uma tradicional instituição de ensino público que atende a comunidade capanemense há décadas, oferecendo educação de qualidade para crianças, adolescentes e jovens da região.</p>
-                    
-                    <p>Nomeado em homenagem ao historiador e educador paranaense <strong>Francisco da Rocha Pombo</strong>, o colégio mantém o compromisso com a excelência educacional e a formação cidadã dos estudantes.</p>
-                    
-                    <div class="mission-vision">
-                        <div class="mission">
-                            <h3><i class="fas fa-bullseye"></i> Missão</h3>
-                            <p>Oferecer educação pública de qualidade que promova o desenvolvimento integral dos estudantes, formando cidadãos críticos, éticos e preparados para os desafios da sociedade.</p>
-                        </div>
-                        
-                        <div class="vision">
-                            <h3><i class="fas fa-eye"></i> Visão</h3>
-                            <p>Ser referência em educação pública na região sudoeste do Paraná, reconhecido pela qualidade do ensino e pelo compromisso com a comunidade capanemense.</p>
-                        </div>
+        <section id="ia-section" class="feature-section">
+            <div class="container">
+                <h2><i class="fas fa-brain"></i> IA Agrícola: Análise Inteligente</h2>
+                <p>Nossa inteligência artificial pode auxiliar na identificação de pragas, doenças e na otimização de culturas.</p>
+                <div class="ia-tool">
+                    <h3>Diagnóstico Rápido</h3>
+                    <p>Envie uma imagem da sua planta para obter um diagnóstico preliminar.</p>
+                    <input type="file" id="plantImageInput" accept="image/*">
+                    <button id="analyzeImageBtn" class="btn">Analisar Imagem</button>
+                    <div id="iaResult" class="result-box">
+                        <p>Aguardando imagem para análise...</p>
                     </div>
-                </div>
-                
-                <div class="about-image">
-                    <img src="https://lh6.googleusercontent.com/proxy/h_wLwKa7pgyYy10rJOZNxPOg1hltliOrEVySjb2maUNT0Snol32ob696XDjsF5M7d1OHmY-Nq3LGB4vv-b8SA4uzcmCQNUrQqivX2QPbjMcEbbnMlgQ3CxT239UiSKo0a5iP7_aT_O5AiVirigRY5cBcG5ds-KL5T3IiMsDqLYrTC39wIzCU" alt="Colégio Estadual Rocha Pombo - Capanema/PR" id="colegio-img">
-                    <p class="image-caption">Colégio Estadual Rocha Pombo - Capanema/PR</p>
+                    <small>Este é um exemplo de interface. A funcionalidade de IA requer um back-end.</small>
                 </div>
             </div>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">Décadas</div>
-                    <div class="stat-text">de Tradição Educacional</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-text">Estudantes Atendidos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-text">Profissionais Dedicados</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Comunidade</div>
-                    <div class="stat-text">Capanemense</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Cursos -->
-    <section id="courses" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Nossos Cursos</h2>
-            
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-child"></i>
+        <section id="calculator-section" class="feature-section bg-light">
+            <div class="container">
+                <h2><i class="fas fa-calculator"></i> Calculadora Agrícola</h2>
+                <p>Ferramentas para calcular insumos, produtividade e custos.</p>
+                <div class="calculator-tool">
+                    <h3>Cálculo de Adubação por Área</h3>
+                    <div class="input-group">
+                        <label for="area">Área (hectares):</label>
+                        <input type="number" id="area" placeholder="Ex: 10">
                     </div>
-                    <h3>Ensino Fundamental</h3>
-                    <p>Do 6º ao 9º ano, com formação básica do cidadão e desenvolvimento das competências cognitivas e sociais.</p>
-                    <ul>
-                        <li>6º ao 9º ano</li>
-                        <li>Turno da manhã e tarde</li>
-                        <li>Projetos pedagógicos</li>
-                        <li>Atividades complementares</li>
-                    </ul>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-user-graduate"></i>
+                    <div class="input-group">
+                        <label for="dose">Dose por hectare (kg/ha):</label>
+                        <input type="number" id="dose" placeholder="Ex: 200">
                     </div>
-                    <h3>Ensino Médio</h3>
-                    <p>Preparação para o ENEM, vestibulares e formação integral para o mercado de trabalho.</p>
-                    <ul>
-                        <li>1ª a 3ª série</li>
-                        <li>Preparação para ENEM</li>
-                        <li>Orientacao Profissional</li>
-                        <li>Projeto de Vida</li>
-                    </ul>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <button id="calculateBtn" class="btn">Calcular Total</button>
+                    <div id="calculatorResult" class="result-box">
+                        <p>Total de Adubo Necessário: <span id="totalAdubo">0</span> kg</p>
                     </div>
-                    <h3>Ensino Técnico</h3>
-                    <p>Cursos técnicos integrados ao ensino médio para formação profissional qualificada.</p>
-                    <ul>
-                        <li>Informática</li>
-                        <li>Administração</li>
-                        <li>Outros conforme demanda</li>
-                        <li>Estágios supervisionados</li>
-                    </ul>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>EJA - Educação de Jovens e Adultos</h3>
-                    <p>Oportunidade de conclusão dos estudos fundamentais e médios para jovens e adultos.</p>
-                    <ul>
-                        <li>Ensino Fundamental EJA</li>
-                        <li>Ensino Médio EJA</li>
-                        <li>Horário noturno</li>
-                        <li>Método adequado à realidade</li>
-                    </ul>
+                    <small>Esta é uma interface para calculadora. A funcionalidade requer JavaScript.</small>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Alimentação Escolar -->
-    <section id="alimentacao" class="section">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-utensils"></i> Alimentação Escolar</h2>
-            
-            <div class="alimentacao-content">
-                <div class="alimentacao-text">
-                    <h3>Merenda Escolar de Qualidade</h3>
-                    <p>O Colégio Estadual Rocha Pombo oferece alimentação escolar balanceada e nutritiva para todos os estudantes, seguindo as diretrizes do Programa Nacional de Alimentação Escolar (PNAE).</p>
-                    
-                    <div class="alimentacao-beneficios">
-                        <div class="beneficio">
-                            <i class="fas fa-apple-alt"></i>
-                            <h4>Cardápio Nutritivo</h4>
-                            <p>Elaborado por nutricionistas com alimentos regionais</p>
-                        </div>
-                        
-                        <div class="beneficio">
-                            <i class="fas fa-seedling"></i>
-                            <h4>Alimentos Saudáveis</h4>
-                            <p>Prioridade por alimentos frescos e naturais</p>
-                        </div>
-                        
-                        <div class="beneficio">
-                            <i class="fas fa-heart"></i>
-                            <h4>Segurança Alimentar</h4>
-                            <p>Preparo higiênico e armazenamento adequado</p>
-                        </div>
-                        
-                        <div class="beneficio">
-                            <i class="fas fa-book"></i>
-                            <h4>Educação Alimentar</h4>
-                            <p>Projetos pedagógicos sobre nutrição e saúde</p>
-                        </div>
-                    </div>
-                    
-                    <p class="alimentacao-info"><i class="fas fa-info-circle"></i> A merenda escolar é fornecida gratuitamente a todos os estudantes matriculados no colégio.</p>
+        <section id="map-section" class="feature-section">
+            <div class="container">
+                <h2><i class="fas fa-map-marked-alt"></i> Mapa Interativo da Propriedade</h2>
+                <p>Visualize suas propriedades, planeje rotas e monitore áreas específicas.</p>
+                <!-- O mapa será renderizado aqui. A funcionalidade requer JavaScript e API Key. -->
+                <div id="map" style="height: 500px; width: 100%; border-radius: 8px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666;">
+                    <p>O mapa interativo aparecerá aqui (requer JavaScript e Google Maps API Key).</p>
                 </div>
-                
-                <div class="alimentacao-image">
-                    <img src="1400081885almocoRochaPombo06.jpg" alt="Merenda escolar no Colégio Rocha Pombo - Capanema">
-                    <p class="image-caption">Refeição servida no colégio - Alimentação saudável e balanceada</p>
+                <div class="map-controls">
+                    <button id="addMarkerBtn" class="btn">Adicionar Marcador</button>
+                    <button id="clearMarkersBtn" class="btn btn-secondary">Limpar Marcadores</button>
+                    <p>Clique no mapa para adicionar pontos de interesse.</p>
+                    <small>Esta é uma interface para o mapa. A funcionalidade requer JavaScript e Google Maps API.</small>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Galeria -->
-    <section id="gallery" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-camera"></i> Nossa Estrutura</h2>
-            <p class="section-subtitle">Conheça as instalações do Colégio Rocha Pombo de Capanema</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://www.educacao.pr.gov.br/sites/default/arquivos_restritos/files/imagem/migrados/galeria/2261/1400081885almocoRochaPombo06.jpg">
-                    <div class="gallery-caption">Laboratório de Ciências</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://mppr.mp.br/sites/default/arquivos_restritos/files/imagem/migrados/galeria/67/Palestra_Colegio_Estadual_Rocha_Pombo.JPG">
-                    <div class="gallery-caption">Biblioteca com acervo atualizado</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://www.educacao.pr.gov.br/sites/default/arquivos_restritos/files/imagem/migrados/galeria/2261/1400081884almocoRochaPombo02.jpg">
-                    <div class="gallery-caption">Quadra Poliesportiva Coberta</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vWk-8Q3CE8ENh6QiXbENRgFRD45wal2R9A&s">
-                    <div class="gallery-caption">Salas de Aula Equipadas</div>
-                </div>
+        <section id="contact" class="feature-section bg-light">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Dúvidas, sugestões ou interesse em parcerias? Fale conosco!</p>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contato -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-address-book"></i> Contato e Localização</h2>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Informações de Contato</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Endereço</h4>
-                            <p>Rua Rocha Pombo, 123<br>Centro, Capanema - Paraná<br>CEP: 85760-000</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Telefones</h4>
-                            <p>(46) 3547-1234<br>(46) 3547-5678</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>E-mail</h4>
-                            <p>rochapombo.capanema@escola.pr.gov.br<br>secretaria.rochapombo@escola.pr.gov.br</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Horário de Atendimento</h4>
-                            <p>Segunda a Sexta: 7h30 às 18h<br>Secretaria: 8h às 17h</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Entre em Contato</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Seu Nome" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" placeholder="Seu E-mail" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" placeholder="Seu Telefone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>Assunto</option>
-                                <option>Matrículas e Rematrículas</option>
-                                <option>Informações sobre Cursos</option>
-                                <option>Documentação Escolar</option>
-                                <option>Outros Assuntos</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="map">
-                <h3>Nossa Localização em Capanema</h3>
-                <div class="map-container">
-                    <div class="map-info">
-                        <p><i class="fas fa-map-pin"></i> <strong>Colégio Estadual Rocha Pombo</strong></p>
-                        <p>Capanema - Região Sudoeste do Paraná</p>
-                        <p>Próximo ao centro da cidade</p>
-                        <p class="map-link"><a href="https://goo.gl/maps/example" target="_blank"><i class="fas fa-external-link-alt"></i> Ver no Google Maps</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="footer-text">
-                        <h3>Colégio Estadual Rocha Pombo</h3>
-                        <p>Capanema - Paraná</p>
-                        <p>Educação pública de qualidade</p>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Links Úteis</h4>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#about">Sobre o Colégio</a></li>
-                        <li><a href="#courses">Nossos Cursos</a></li>
-                        <li><a href="#alimentacao">Alimentação Escolar</a></li>
-                        <li><a href="#gallery">Galeria</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-info">
-                    <h4>Secretaria de Educação</h4>
-                    <p>Colégio vinculado à:</p>
-                    <p><strong>Secretaria de Estado da Educação do Paraná</strong></p>
-                    <p><a href="https://www.educacao.pr.gov.br" target="_blank">www.educacao.pr.gov.br</a></p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 Colégio Estadual Rocha Pombo - Capanema/PR. Todos os direitos reservados.</p>
-                <p>Este site contém todos os arquivos solicitados: index.html, style.css, README.md, LICENSE e imagem do colégio.</p>
-                <p><a href="LICENSE" target="_blank">Licença MIT</a> | <a href="README.md" target="_blank">Documentação</a></p>
+            <p>&copy; 2026 AgroTech Solutions. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
-
-    <!-- Botão Voltar ao Topo -->
-    <a href="#home" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <script>
-        // JavaScript básico para funcionalidades
-        document.addEventListener('DOMContentLoaded', function() {
-            // Botão voltar ao topo
-            const backToTop = document.querySelector('.back-to-top');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTop.classList.add('active');
-                } else {
-                    backToTop.classList.remove('active');
-                }
-            });
-            
-            // Menu móvel
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const nav = document.querySelector('nav ul');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                nav.classList.toggle('show');
-            });
-            
-            // Formulário de contato
-            const contactForm = document.getElementById('contactForm');
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-                contactForm.reset();
-            });
-        });
-    </script>
 </body>
 </html>
