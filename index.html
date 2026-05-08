@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroTech Solutions - Seu Parceiro no Campo</title>
+    <title>AgroFutura - Inovação e Sustentabilidade no Agronegócio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ícone da página (opcional) - Substitua pela sua imagem -->
-    <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2909/2909788.svg" type="image/x-icon">
-    <!-- Fontes do Google (opcional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Ícones Font Awesome (para ícones como cérebro, calculadora, mapa) -->
+    <!-- Ícone da página (Favicon) -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2909/2909788.png" type="image/png">
+    <!-- Fontes do Google: Montserrat para títulos, Open Sans para corpo -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Ícones Font Awesome (para ícones como cérebro, calculadora, mapa, etc.) -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <!-- Substitua pela sua logo -->
-                <img src="https://via.placeholder.com/50x50/008000/FFFFFF?text=AGRO" alt="Logo AgroTech">
-                <h1>AgroTech Solutions</h1>
+                <img src="https://cdn-icons-png.flaticon.com/512/2909/2909788.png" alt="Logo AgroFutura">
+                <h1>AgroFutura</h1>
             </div>
             <nav>
-                <ul>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+                <ul class="nav-links">
                     <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#services">Serviços</a></li>
                     <li><a href="#ia-section">IA Agrícola</a></li>
                     <li><a href="#calculator-section">Calculadora</a></li>
-                    <li><a href="#map-section">Mapa Interativo</a></li>
+                    <li><a href="#map-section">Mapa</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#blog">Notícias</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
@@ -34,101 +39,216 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="container">
-                <h2>Inovação e Tecnologia no Campo</h2>
-                <p>Otimize sua produção agrícola com nossas ferramentas inteligentes.</p>
-                <a href="#ia-section" class="btn">Conheça Nossas Soluções</a>
+            <div class="hero-content container">
+                <h2>O Futuro do Campo Começa Aqui.</h2>
+                <p>Tecnologia e sustentabilidade para impulsionar sua produtividade e rentabilidade.</p>
+                <a href="#services" class="btn btn-primary">Nossos Serviços</a>
+                <a href="#contact" class="btn btn-secondary">Fale Conosco</a>
             </div>
         </section>
 
-        <section id="ia-section" class="feature-section">
-            <div class="container">
-                <h2><i class="fas fa-brain"></i> IA Agrícola: Análise Inteligente</h2>
-                <p>Nossa inteligência artificial pode auxiliar na identificação de pragas, doenças e na otimização de culturas.</p>
-                <div class="ia-tool">
-                    <h3>Diagnóstico Rápido</h3>
-                    <p>Envie uma imagem da sua planta para obter um diagnóstico preliminar.</p>
-                    <input type="file" id="plantImageInput" accept="image/*">
-                    <button id="analyzeImageBtn" class="btn">Analisar Imagem</button>
-                    <div id="iaResult" class="result-box">
-                        <p>Aguardando imagem para análise...</p>
-                    </div>
-                    <small>Este é um exemplo de interface. A funcionalidade de IA requer um back-end.</small>
+        <section id="about" class="section-padding bg-light">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1579621370795-92795861113c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmFybWVyLGZpZWxkLGdyZWVufHx8fHx8fDE3MTUyNDc5NTI&ixlib=rb-4.0.3&q=80&w=1080" alt="Agricultor no campo">
+                </div>
+                <div class="about-text">
+                    <h2>Quem Somos</h2>
+                    <p>A AgroFutura nasceu da paixão pela terra e da visão de um agronegócio mais inteligente e sustentável. Combinamos tecnologia de ponta com o conhecimento tradicional do campo para oferecer soluções inovadoras que transformam lavouras em resultados.</p>
+                    <p>Nossa equipe é composta por agrônomos, engenheiros e especialistas em dados, dedicados a ajudar produtores a tomar decisões mais assertivas, otimizar recursos e garantir a prosperidade de suas atividades.</p>
+                    <a href="#contact" class="btn btn-primary">Saiba Mais</a>
                 </div>
             </div>
         </section>
 
-        <section id="calculator-section" class="feature-section bg-light">
+        <section id="services" class="section-padding">
             <div class="container">
-                <h2><i class="fas fa-calculator"></i> Calculadora Agrícola</h2>
-                <p>Ferramentas para calcular insumos, produtividade e custos.</p>
-                <div class="calculator-tool">
-                    <h3>Cálculo de Adubação por Área</h3>
+                <h2>Nossos Serviços</h2>
+                <p class="section-description">Oferecemos um portfólio completo de soluções para o agronegócio moderno.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Consultoria Agronômica</h3>
+                        <p>Orientação especializada para manejo de culturas, solo e pragas, visando o máximo rendimento.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Análise de Dados</h3>
+                        <p>Coleta e interpretação de dados para otimização de recursos e planejamento estratégico.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tractor"></i>
+                        <h3>Agricultura de Precisão</h3>
+                        <p>Tecnologias avançadas para aplicação localizada de insumos e monitoramento de lavouras.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Mapeamento e Georreferenciamento</h3>
+                        <p>Utilização de drones e GPS para mapeamento detalhado de propriedades rurais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ia-section" class="section-padding bg-light">
+            <div class="container">
+                <h2><i class="fas fa-brain"></i> IA Agrícola: Seu Assistente no Campo</h2>
+                <p class="section-description">Utilize nossa inteligência artificial para diagnósticos rápidos e recomendações precisas.</p>
+                <div class="ia-tool tool-card">
+                    <h3>Diagnóstico de Plantas</h3>
+                    <p>Envie uma imagem da sua planta e receba uma análise preliminar de possíveis problemas.</p>
+                    <input type="file" id="plantImageInput" accept="image/*">
+                    <button class="btn btn-primary">Analisar Imagem</button>
+                    <div class="result-box">
+                        <p>O resultado da análise aparecerá aqui.</p>
+                    </div>
+                    <small>Esta é uma interface. A funcionalidade de IA requer integração com um sistema de back-end.</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator-section" class="section-padding">
+            <div class="container">
+                <h2><i class="fas fa-calculator"></i> Calculadora Agrícola Inteligente</h2>
+                <p class="section-description">Ferramentas para otimizar seus cálculos de insumos, custos e produtividade.</p>
+                <div class="calculator-tool tool-card">
+                    <h3>Cálculo de Adubação</h3>
                     <div class="input-group">
                         <label for="area">Área (hectares):</label>
-                        <input type="number" id="area" placeholder="Ex: 10">
+                        <input type="number" id="area" placeholder="Ex: 10" min="0">
                     </div>
                     <div class="input-group">
                         <label for="dose">Dose por hectare (kg/ha):</label>
-                        <input type="number" id="dose" placeholder="Ex: 200">
+                        <input type="number" id="dose" placeholder="Ex: 200" min="0">
                     </div>
-                    <button id="calculateBtn" class="btn">Calcular Total</button>
-                    <div id="calculatorResult" class="result-box">
+                    <button class="btn btn-primary">Calcular Total</button>
+                    <div class="result-box">
                         <p>Total de Adubo Necessário: <span id="totalAdubo">0</span> kg</p>
                     </div>
-                    <small>Esta é uma interface para calculadora. A funcionalidade requer JavaScript.</small>
+                    <small>Esta é uma interface. A funcionalidade da calculadora requer JavaScript.</small>
                 </div>
             </div>
         </section>
 
-        <section id="map-section" class="feature-section">
+        <section id="map-section" class="section-padding bg-light">
             <div class="container">
                 <h2><i class="fas fa-map-marked-alt"></i> Mapa Interativo da Propriedade</h2>
-                <p>Visualize suas propriedades, planeje rotas e monitore áreas específicas.</p>
-                <!-- O mapa será renderizado aqui. A funcionalidade requer JavaScript e API Key. -->
-                <div id="map" style="height: 500px; width: 100%; border-radius: 8px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666;">
+                <p class="section-description">Visualize, planeje e monitore suas áreas de cultivo com precisão geográfica.</p>
+                <div id="map" class="map-placeholder">
                     <p>O mapa interativo aparecerá aqui (requer JavaScript e Google Maps API Key).</p>
                 </div>
-                <div class="map-controls">
-                    <button id="addMarkerBtn" class="btn">Adicionar Marcador</button>
-                    <button id="clearMarkersBtn" class="btn btn-secondary">Limpar Marcadores</button>
-                    <p>Clique no mapa para adicionar pontos de interesse.</p>
-                    <small>Esta é uma interface para o mapa. A funcionalidade requer JavaScript e Google Maps API.</small>
+                <div class="map-controls tool-card">
+                    <button class="btn btn-primary">Adicionar Marcador</button>
+                    <button class="btn btn-secondary">Limpar Marcadores</button>
+                    <p class="control-info">Clique no mapa para adicionar pontos de interesse ou demarcar áreas.</p>
+                    <small>Esta é uma interface. A funcionalidade do mapa requer JavaScript e Google Maps API.</small>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="feature-section bg-light">
+        <section id="testimonials" class="section-padding testimonial-section">
             <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Dúvidas, sugestões ou interesse em parcerias? Fale conosco!</p>
-                <form class="contact-form">
-                    <div class="input-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" required>
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <p class="section-description">A satisfação dos nossos parceiros é o nosso maior orgulho.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ad02f06b4640?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cG9ydHJhaXQsbWFuLGZhcm1lcnxlfHx8fHx8MTcxNTI0ODg4Nw&ixlib=rb-4.0.3&q=80&w=400" alt="Foto de João Silva">
+                        <p>"A AgroFutura revolucionou a forma como eu gerencio minha fazenda. Os diagnósticos da IA são impressionantes e a consultoria me ajudou a aumentar minha produtividade em 20%!"</p>
+                        <h4>João Silva</h4>
+                        <span>Produtor Rural - Fazenda Esperança</span>
                     </div>
-                    <div class="input-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cG9ydHJhaXQsd29tYW4sZmFybWVyfHx8fHx8MTcxNTI0ODg5Mg&ixlib=rb-4.0.3&q=80&w=400" alt="Foto de Maria Oliveira">
+                        <p>"As ferramentas de mapeamento são incríveis! Consegui identificar áreas problemáticas e otimizar a aplicação de fertilizantes, economizando muito."</p>
+                        <h4>Maria Oliveira</h4>
+                        <span>Engenheira Agrônoma - Grupo VerdeCampo</span>
                     </div>
-                    <div class="input-group">
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" rows="5" required></textarea>
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cG9ydHJhaXQsbWFuLGJ1c2luZXNzfHx8fHx8fDE3MTUyNDg4OTg&ixlib=rb-4.0.3&q=80&w=400" alt="Foto de Pedro Souza">
+                        <p>"Suporte excepcional e tecnologia de ponta. A AgroFutura é, sem dúvida, a melhor parceira para quem busca inovação no agronegócio."</p>
+                        <h4>Pedro Souza</h4>
+                        <span>Gestor Agrícola - Agronegócios do Vale</span>
                     </div>
-                    <button type="submit" class="btn">Enviar Mensagem</button>
-                </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section-padding bg-light">
+            <div class="container">
+                <h2>Últimas Notícias e Artigos</h2>
+                <p class="section-description">Mantenha-se atualizado com as tendências e inovações do setor.</p>
+                <div class="blog-grid">
+                    <article class="blog-post-card">
+                        <img src="https://images.unsplash.com/photo-1506477341490-dd3901b0b471?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dHJhY3RvcixlYXJseSxtb3JuaW5nfHx8fHx8fDE3MTUyNDkwNTc&ixlib=rb-4.0.3&q=80&w=600" alt="Trator no campo ao amanhecer">
+                        <h3>O Impacto da IA na Colheita de Grãos</h3>
+                        <p>Descubra como a inteligência artificial está otimizando a colheita, reduzindo perdas e aumentando a eficiência no campo.</p>
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="blog-post-card">
+                        <img src="https://images.unsplash.com/photo-1557877207-6467000d021f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZHJvbmUsZmllbGQsYWdyaWN1bHR1cmV8fHx8fHx8MTcxNTI0OTA2MQ&ixlib=rb-4.0.3&q=80&w=600" alt="Drone sobrevoando plantação">
+                        <h3>Drones: A Nova Fronteira da Agricultura de Precisão</h3>
+                        <p>Explore como os drones estão transformando o monitoramento de lavouras e a aplicação de insumos agrícolas.</p>
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="blog-post-card">
+                        <img src="https://images.unsplash.com/photo-1579547621609-b73379650050?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c29pbCxpbnZlc3RpZ2F0aW9uLGxhYm9yYXRvcnl8fHx8fHx8MTcxNTI0OTA2NQ&ixlib=rb-4.0.3&q=80&w=600" alt="Análise de solo em laboratório">
+                        <h3>Manejo Sustentável do Solo: Práticas Essenciais</h3>
+                        <p>Conheça as melhores práticas para garantir a saúde do solo e a sustentabilidade da sua produção a longo prazo.</p>
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-primary">Ver Todas as Notícias</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p class="section-description">Estamos prontos para ouvir suas necessidades e oferecer as melhores soluções.</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Rua da Inovação, 123 - Centro, Agrópolis - AG</p>
+                        <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> contato@agrofutura.com.br</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <h3>Envie uma Mensagem</h3>
+                        <div class="input-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Assunto:</label>
+                            <input type="text" id="subject">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 AgroTech Solutions. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+            <p>&copy; 2026 AgroFutura. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> por [Seu Nome/Empresa]</p>
         </div>
     </footer>
 </body>
