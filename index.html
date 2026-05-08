@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroFutura - Inovação e Sustentabilidade no Agronegócio</title>
-    <!-- Favicon removido -->
     <link rel="stylesheet" href="style.css">
     <!-- Fontes do Google: Montserrat para títulos, Open Sans para corpo -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Ícones Font Awesome (para ícones como cérebro, calculadora, mapa, etc.) -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Google Maps API - SUBSTITUA 'YOUR_API_KEY' PELA SUA CHAVE REAL -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <!-- Imagem do logo removida, usando apenas texto -->
                 <h1>AgroFutura</h1>
             </div>
             <nav>
@@ -48,7 +49,9 @@
 
         <section id="about" class="section-padding bg-light">
             <div class="container about-grid">
-                <!-- Imagem da seção "Sobre Nós" removida -->
+                <div class="about-placeholder">
+                    <p>[Espaço para imagem ou conteúdo visual]</p>
+                </div>
                 <div class="about-text">
                     <h2>Quem Somos</h2>
                     <p>A AgroFutura nasceu da paixão pela terra e da visão de um agronegócio mais inteligente e sustentável. Combinamos tecnologia de ponta com o conhecimento tradicional do campo para oferecer soluções inovadoras que transformam lavouras em resultados.</p>
@@ -131,14 +134,11 @@
             <div class="container">
                 <h2><i class="fas fa-map-marked-alt"></i> Mapa Interativo da Propriedade</h2>
                 <p class="section-description">Visualize, planeje e monitore suas áreas de cultivo com precisão geográfica.</p>
-                <div id="map" class="map-placeholder">
-                    <p>O mapa interativo aparecerá aqui (requer JavaScript e Google Maps API Key).</p>
-                </div>
+                <!-- O mapa será renderizado aqui -->
+                <div id="map" class="map-container"></div>
                 <div class="map-controls tool-card">
-                    <button class="btn btn-primary">Adicionar Marcador</button>
-                    <button class="btn btn-secondary">Limpar Marcadores</button>
-                    <p class="control-info">Clique no mapa para adicionar pontos de interesse ou demarcar áreas.</p>
-                    <small>Esta é uma interface. A funcionalidade do mapa requer JavaScript e Google Maps API.</small>
+                    <p class="control-info">O mapa acima é interativo. Você pode arrastar e dar zoom.</p>
+                    <small>A funcionalidade de adicionar/limpar marcadores requer JavaScript adicional.</small>
                 </div>
             </div>
         </section>
@@ -149,19 +149,16 @@
                 <p class="section-description">A satisfação dos nossos parceiros é o nosso maior orgulho.</p>
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <!-- Imagem do depoimento removida -->
                         <p>"A AgroFutura revolucionou a forma como eu gerencio minha fazenda. Os diagnósticos da IA são impressionantes e a consultoria me ajudou a aumentar minha produtividade em 20%!"</p>
                         <h4>João Silva</h4>
                         <span>Produtor Rural - Fazenda Esperança</span>
                     </div>
                     <div class="testimonial-card">
-                        <!-- Imagem do depoimento removida -->
                         <p>"As ferramentas de mapeamento são incríveis! Consegui identificar áreas problemáticas e otimizar a aplicação de fertilizantes, economizando muito."</p>
                         <h4>Maria Oliveira</h4>
                         <span>Engenheira Agrônoma - Grupo VerdeCampo</span>
                     </div>
                     <div class="testimonial-card">
-                        <!-- Imagem do depoimento removida -->
                         <p>"Suporte excepcional e tecnologia de ponta. A AgroFutura é, sem dúvida, a melhor parceira para quem busca inovação no agronegócio."</p>
                         <h4>Pedro Souza</h4>
                         <span>Gestor Agrícola - Agronegócios do Vale</span>
@@ -176,19 +173,16 @@
                 <p class="section-description">Mantenha-se atualizado com as tendências e inovações do setor.</p>
                 <div class="blog-grid">
                     <article class="blog-post-card">
-                        <!-- Imagem do post do blog removida -->
                         <h3>O Impacto da IA na Colheita de Grãos</h3>
                         <p>Descubra como a inteligência artificial está otimizando a colheita, reduzindo perdas e aumentando a eficiência no campo.</p>
                         <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
                     </article>
                     <article class="blog-post-card">
-                        <!-- Imagem do post do blog removida -->
                         <h3>Drones: A Nova Fronteira da Agricultura de Precisão</h3>
                         <p>Explore como os drones estão transformando o monitoramento de lavouras e a aplicação de insumos agrícolas.</p>
                         <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
                     </article>
                     <article class="blog-post-card">
-                        <!-- Imagem do post do blog removida -->
                         <h3>Manejo Sustentável do Solo: Práticas Essenciais</h3>
                         <p>Conheça as melhores práticas para garantir a saúde do solo e a sustentabilidade da sua produção a longo prazo.</p>
                         <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
@@ -248,5 +242,51 @@
             <p>Desenvolvido com <i class="fas fa-heart"></i> por [Seu Nome/Empresa]</p>
         </div>
     </footer>
+
+    <!-- Script JavaScript para inicializar o mapa -->
+    <script>
+        let map;
+
+        function initMap() {
+            // Localização padrão (ex: centro do Brasil ou uma área agrícola)
+            const defaultLocation = { lat: -14.235, lng: -53.1925 }; // Centro do Brasil
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: defaultLocation,
+                zoom: 4, // Nível de zoom inicial
+                mapTypeId: 'hybrid' // Exibe imagens de satélite
+            });
+
+            // Opcional: Adicionar um marcador inicial
+            new google.maps.Marker({
+                position: { lat: -15.78, lng: -47.92 }, // Exemplo: Brasília
+                map: map,
+                title: 'Sede AgroFutura'
+            });
+        }
+
+        // --- JavaScript para menu responsivo e scroll suave (mantido do exemplo anterior) ---
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Fechar o menu em telas pequenas após o clique
+                    const menuToggle = document.getElementById('menu-toggle');
+                    if (menuToggle && menuToggle.checked) {
+                        menuToggle.checked = false;
+                    }
+                });
+            });
+
+            // Adiciona um placeholder para a imagem na seção "Sobre Nós"
+            const aboutPlaceholder = document.querySelector('.about-placeholder');
+            if (aboutPlaceholder && aboutPlaceholder.innerHTML.trim() === '<p>[Espaço para imagem ou conteúdo visual]</p>') {
+                aboutPlaceholder.innerHTML = `<div style="height: 100%; width: 100%; background-color: #e0e0e0; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #6c757d; font-style: italic;">Espaço para imagem</div>`;
+            }
+        });
+    </script>
 </body>
 </html>

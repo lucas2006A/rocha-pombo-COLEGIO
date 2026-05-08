@@ -133,12 +133,6 @@ header .container {
     align-items: center;
 }
 
-/* .logo img { REMOVIDO
-    height: 45px;
-    margin-right: 12px;
-    border-radius: 5px;
-} */
-
 .logo h1 {
     font-family: var(--font-heading);
     font-size: 2rem;
@@ -184,7 +178,6 @@ header .container {
 
 /* --- Hero Section --- */
 .hero {
-    /* IMAGEM DE FUNDO REMOVIDA */
     background: var(--secondary-color); /* Usando cor sólida como fundo */
     color: #fff;
     text-align: center;
@@ -220,15 +213,8 @@ header .container {
     align-items: center;
 }
 
-/* .about-image img { REMOVIDO
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-} */
-
-/* Adiciona um espaço onde a imagem estava para manter o layout */
-.about-grid > div:first-child:not(.about-text) {
+/* Placeholder para a imagem na seção "Sobre Nós" */
+.about-placeholder {
     min-height: 300px; /* Ou um valor adequado */
     background-color: var(--bg-light); /* Cor de fundo para preencher o espaço */
     border-radius: 12px;
@@ -237,6 +223,7 @@ header .container {
     justify-content: center;
     color: var(--light-text-color);
     font-style: italic;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 
@@ -379,19 +366,14 @@ input[type="file"]:focus {
     text-align: center;
 }
 
-/* Mapa Placeholder */
-.map-placeholder {
-    height: 450px;
+/* --- Estilos para o Mapa --- */
+.map-container {
+    height: 450px; /* Altura do mapa */
     width: 100%;
     border-radius: 12px;
-    background-color: #e9ecef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #6c757d;
-    font-size: 1.2rem;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     margin-bottom: 30px;
+    background-color: #e9ecef; /* Cor de fundo enquanto o mapa carrega */
 }
 
 .map-controls {
@@ -411,7 +393,6 @@ input[type="file"]:focus {
 
 /* --- Testimonials Section --- */
 .testimonial-section {
-    /* IMAGEM DE FUNDO REMOVIDA */
     background-color: var(--bg-light); /* Usando cor sólida como fundo */
     color: var(--text-color); /* Ajusta a cor do texto para o fundo claro */
     text-align: center;
@@ -446,15 +427,6 @@ input[type="file"]:focus {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-
-/* .testimonial-card img { REMOVIDO
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid var(--primary-color);
-} */
 
 .testimonial-card p {
     font-style: italic;
@@ -495,13 +467,6 @@ input[type="file"]:focus {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
-
-/* .blog-post-card img { REMOVIDO
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-} */
 
 .blog-post-card h3 {
     font-size: 1.5rem;
@@ -659,11 +624,11 @@ footer i {
         padding: 60px 0;
     }
 
-    .tool-card, .map-placeholder {
+    .tool-card, .map-container { /* Alterado de .map-placeholder para .map-container */
         margin: 30px auto;
     }
 
-    .map-placeholder {
+    .map-container { /* Alterado de .map-placeholder para .map-container */
         height: 350px;
     }
 
@@ -760,11 +725,11 @@ footer i {
         padding: 60px 0;
     }
 
-    .tool-card, .map-placeholder {
+    .tool-card, .map-container { /* Alterado de .map-placeholder para .map-container */
         margin: 30px auto;
     }
 
-    .map-placeholder {
+    .map-container { /* Alterado de .map-placeholder para .map-container */
         height: 350px;
     }
 
