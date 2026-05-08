@@ -133,11 +133,11 @@ header .container {
     align-items: center;
 }
 
-.logo img {
+/* .logo img { REMOVIDO
     height: 45px;
     margin-right: 12px;
     border-radius: 5px;
-}
+} */
 
 .logo h1 {
     font-family: var(--font-heading);
@@ -184,8 +184,8 @@ header .container {
 
 /* --- Hero Section --- */
 .hero {
-    /* IMAGEM DE FUNDO ATUALIZADA */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1547483661-84c205792948?auto=format&fit=crop&q=80&w=1920&h=1080&ixid=eyJhcHBfaWQiOjEyMDd9') no-repeat center center/cover;
+    /* IMAGEM DE FUNDO REMOVIDA */
+    background: var(--secondary-color); /* Usando cor sólida como fundo */
     color: #fff;
     text-align: center;
     padding: 150px 0;
@@ -199,7 +199,7 @@ header .container {
     font-size: 4rem;
     margin-bottom: 25px;
     color: #fff;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5); /* Mantido para contraste */
     line-height: 1.2;
 }
 
@@ -209,7 +209,7 @@ header .container {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4); /* Mantido para contraste */
 }
 
 /* --- About Section --- */
@@ -220,12 +220,25 @@ header .container {
     align-items: center;
 }
 
-.about-image img {
+/* .about-image img { REMOVIDO
     max-width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+} */
+
+/* Adiciona um espaço onde a imagem estava para manter o layout */
+.about-grid > div:first-child:not(.about-text) {
+    min-height: 300px; /* Ou um valor adequado */
+    background-color: var(--bg-light); /* Cor de fundo para preencher o espaço */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text-color);
+    font-style: italic;
 }
+
 
 .about-text h2 {
     text-align: left;
@@ -398,18 +411,18 @@ input[type="file"]:focus {
 
 /* --- Testimonials Section --- */
 .testimonial-section {
-    /* IMAGEM DE FUNDO ATUALIZADA */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1547483661-84c205792948?auto=format&fit=crop&q=80&w=1920&h=1080&ixid=eyJhcHBfaWQiOjEyMDd9') no-repeat center center/cover;
-    color: #fff;
+    /* IMAGEM DE FUNDO REMOVIDA */
+    background-color: var(--bg-light); /* Usando cor sólida como fundo */
+    color: var(--text-color); /* Ajusta a cor do texto para o fundo claro */
     text-align: center;
 }
 
 .testimonial-section h2 {
-    color: #fff;
+    color: var(--secondary-color); /* Ajusta a cor do título */
 }
 
 .testimonial-section .section-description {
-    color: #e0e0e0;
+    color: var(--light-text-color); /* Ajusta a cor da descrição */
 }
 
 .testimonials-grid {
@@ -420,7 +433,7 @@ input[type="file"]:focus {
 }
 
 .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -434,14 +447,14 @@ input[type="file"]:focus {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.testimonial-card img {
+/* .testimonial-card img { REMOVIDO
     width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
     border: 3px solid var(--primary-color);
-}
+} */
 
 .testimonial-card p {
     font-style: italic;
@@ -483,12 +496,12 @@ input[type="file"]:focus {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.blog-post-card img {
+/* .blog-post-card img { REMOVIDO
     width: 100%;
     height: 220px;
     object-fit: cover;
     display: block;
-}
+} */
 
 .blog-post-card h3 {
     font-size: 1.5rem;
